@@ -1,25 +1,14 @@
 <?php
 
 /**
- * @author Alireza Akhtari
- * @edit by VahabOnline.ir
+ * @edit by VAHABONLINE.IR
  */
 
-/**
- * Define module related meta data.
- *
- * Values returned here are used to determine module related capabilities and
- * settings.
- *
- * @see https://developers.whmcs.com/payment-gateways/meta-data-params/
- *
- * @return array
- */
 function webpay_MetaData()
 {
     return array(
         'DisplayName' => 'وب پی',
-        'APIVersion' => '1.1', // Use API Version 1.1
+        'APIVersion' => '1.2', // Use API Version 1.1
         'DisableLocalCredtCardInput' => true,
         'TokenisedStorage' => false,
     );
@@ -36,14 +25,14 @@ function webpay_config()
             'Value' => 'Webpay'
         ),
         'webpay_api_key' => array(
-            'FriendlyName' => 'Api Key',
+            'FriendlyName' => 'کلید ارتباطی API',
             'Type' => 'text',
-            'Description' => 'Enter your api key'
+            'Description' => 'کلید ارتباطی که از سایت وب پی دریافت کرده اید را وارد کنید'
         ),
         'webpay_sandbox' => array(
-            'FriendlyName' => 'Test Gateway',
+            'FriendlyName' => 'درگاه تست',
             'Type' => 'yesno',
-            'Description' => 'Tick checkbox for connect to sandbox'
+            'Description' => 'اتصال به وبسرویس تست درگاه'
         )
     );
 }
