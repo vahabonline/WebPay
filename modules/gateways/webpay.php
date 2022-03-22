@@ -13,10 +13,8 @@ function webpay_MetaData()
         'TokenisedStorage' => false,
     );
 }
-/**
- * Define gateway configuration options.
- * @return array
- */
+
+
 function webpay_config()
 {
     return array(
@@ -37,18 +35,8 @@ function webpay_config()
     );
 }
 
-/**
- * Payment link.
- *
- * @param array $param Payment Gateway Module Parameters
- * 
- * @see https://developers.whmcs.com/payment-gateways/third-party-gateway/
- * 
- * @return string
- */
 function webpay_link($params){
 
-    // request to create payment
     $paymentUrl = $params['systemurl'] . 'modules/gateways/link/webpay.php';
     $callbackUrl = $params['systemurl'] . 'modules/gateways/callback/webpay.php';
     $amount = round($params['amount']);
@@ -57,7 +45,6 @@ function webpay_link($params){
         $amount = round($amount * 10);
     }
 
-    // create html form
     $htmlForm = "
         <form method='post' action='{$paymentUrl}'>
         <input type='hidden' name='api_key' value='{$params['webpay_api_key']}'> 
