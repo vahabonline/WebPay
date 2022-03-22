@@ -31,14 +31,14 @@ if(isset($_REQUEST['reference'])){
     // success 
     if(isset($_REQUEST['state']) && $_REQUEST['state'] == 'wait_for_confirm'){
         
-        if($gatewayParams['webpay_sandbox'] == 'on'){
+        if($gatewayParams['bahamta_sandbox'] == 'on'){
             $url = 'https://testwebpay.bahamta.com/api/confirm_payment?';
         } else{
             $url = 'https://webpay.bahamta.com/api/confirm_payment?';
         }
 
         $url .= http_build_query(array(
-            'api_key' => $gatewayParams['webpay_api_key'],
+            'api_key' => $gatewayParams['bahamta_api_key'],
             'reference' => $_REQUEST['reference'],
             'amount_irr' => round($invoice->total)
         ));
