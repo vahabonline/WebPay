@@ -1,8 +1,6 @@
 <?php
 /**
  * @author Alireza Akhtari
- * @edit by VahabOnline.ir
-  * Go to payment if request to create a payment
  */
 
 if (isset($_POST['webpay_create_request'])) {   
