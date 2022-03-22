@@ -4,7 +4,7 @@
  * @edit by VAHABONLINE.IR
  */
 
-function webpay_MetaData()
+function bahamta_MetaData()
 {
     return array(
         'DisplayName' => 'وب پی',
@@ -15,19 +15,19 @@ function webpay_MetaData()
 }
 
 
-function webpay_config()
+function bahamta_config()
 {
     return array(
         'FriendlyName' => array(
             'Type' => 'System',
-            'Value' => 'Webpay'
+            'Value' => 'bahamta'
         ),
-        'webpay_api_key' => array(
+        'bahamta_api_key' => array(
             'FriendlyName' => 'کلید ارتباطی API',
             'Type' => 'text',
             'Description' => 'کلید ارتباطی که از سایت وب پی دریافت کرده اید را وارد کنید'
         ),
-        'webpay_sandbox' => array(
+        'bahamta_sandbox' => array(
             'FriendlyName' => 'درگاه تست',
             'Type' => 'yesno',
             'Description' => 'اتصال به وبسرویس تست درگاه'
@@ -35,10 +35,10 @@ function webpay_config()
     );
 }
 
-function webpay_link($params){
+function bahamta_link($params){
 
-    $paymentUrl = $params['systemurl'] . 'modules/gateways/link/webpay.php';
-    $callbackUrl = $params['systemurl'] . 'modules/gateways/callback/webpay.php';
+    $paymentUrl = $params['systemurl'] . 'modules/gateways/link/bahamta.php';
+    $callbackUrl = $params['systemurl'] . 'modules/gateways/callback/bahamta.php';
     $amount = round($params['amount']);
     
     if($params['currency'] == "IRT"){
@@ -47,13 +47,13 @@ function webpay_link($params){
 
     $htmlForm = "
         <form method='post' action='{$paymentUrl}'>
-        <input type='hidden' name='api_key' value='{$params['webpay_api_key']}'> 
+        <input type='hidden' name='api_key' value='{$params['bahamta_api_key']}'> 
         <input type='hidden' name='reference' value='{$params['invoiceid']}'> 
         <input type='hidden' name='amount_irr' value='{$amount}'> 
         <input type='hidden' name='payer_mobile' value='{$params['clientdetails']['phonenumber']}'> 
         <input type='hidden' name='callback_url' value='{$callbackUrl}'> 
-        <input type='hidden' name='sandbox_mode' value='{$params['webpay_sandbox']}' />
-        <input type='hidden' name='webpay_create_request' value='yes' />
+        <input type='hidden' name='sandbox_mode' value='{$params['bahamta_sandbox']}' />
+        <input type='hidden' name='bahamta_create_request' value='yes' />
         <input type='submit' value='{$params['langpaynow']}'>
         </form> 
     ";
