@@ -1,7 +1,6 @@
 <?php
 
 /**
- * @author Alireza Akhtari
  * @edit by VahabOnline.ir
  */
 
@@ -12,13 +11,10 @@ require_once __DIR__ . '/../../../init.php';
 require_once __DIR__ . '/../../../includes/gatewayfunctions.php';
 require_once __DIR__ . '/../../../includes/invoicefunctions.php';
 
-// Detect module name from filename.
 $gatewayModuleName = basename(__FILE__, '.php');
 
-// Fetch gateway configuration parameters.
 $gatewayParams = getGatewayVariables($gatewayModuleName);
 
-// Die if module is not active.
 if (!$gatewayParams['type']) {
     die("Module Not Activated");
 }
