@@ -3,7 +3,7 @@
  * @author Alireza Akhtari
  */
 
-if (isset($_POST['webpay_create_request'])) {   
+if (isset($_POST['bahamta_create_request'])) {   
 
     if($_POST['sandbox_mode'] == 'on') {
         $url = 'https://testwebpay.bahamta.com/api/create_request?';
