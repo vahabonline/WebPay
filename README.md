@@ -9,4 +9,4 @@
 <br/>
 #امکان جستجو در بین پرداخت ها به وسیله شماره کارت ، شماره پیگیری و...
 <br/>
-https://webpay.bahamta.com/
+این ماژول توسط <a href="https://vahabonline.ir" target="_blank">وهاب آنلاین</a> برای شرکت <a href="https://webpay.bahamta.com/" target="_blank">با همتا</a> کدنویسی شده است
