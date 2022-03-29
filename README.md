@@ -8,7 +8,7 @@
 #ارائه افزونه اختصاصی
 <br/>
 #امکان جستجو در بین پرداخت ها به وسیله شماره کارت ، شماره پیگیری و...
-
+<hr/>
 <br/>
 <br/>
 <div style="background: #8bc34a;padding: 15px;border-radius: 4px;border: solid 2px #5c8d24;color: #fff;font-family: tahoma;font-size: 14px;">
