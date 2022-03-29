@@ -11,15 +11,7 @@
 
 <br/>
 <br/>
-<div dir="auto" style="
-    background: #8bc34a;
-    padding: 15px;
-    border-radius: 4px;
-    border: solid 2px #5c8d24;
-    color: #fff;
-    font-family: tahoma;
-    font-size: 14px;
-">
+<div style="background: #8bc34a;padding: 15px;border-radius: 4px;border: solid 2px #5c8d24;color: #fff;font-family: tahoma;font-size: 14px;">
 این ماژول توسط <a href="https://vahabonline.ir" target="_blank">وهاب آنلاین</a> برای شرکت <a href="https://webpay.bahamta.com/" target="_blank">با همتا</a> کدنویسی شده است  
 </div>
 
